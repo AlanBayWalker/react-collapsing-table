@@ -1,6 +1,5 @@
 import React from 'react';
 import faker from 'faker';
-import moment from 'moment';
 import Button from './button';
 import Link from './link';
 import TextInputPagination from './TextInputPagination';
@@ -15,7 +14,7 @@ export const generateFakeData = ({ totalRows }) => {
                 lastName: faker.name.lastName(),
                 email: faker.internet.email(),
                 address: faker.address.streetAddress(),
-                date: moment(faker.date.past()).format('MM/DD/YYYY'),
+                date: faker.date.past(),
                 city: faker.address.city(),
                 state: faker.address.state(),
                 country: faker.address.country(),
